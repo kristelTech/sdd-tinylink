@@ -24,7 +24,42 @@ test/api.test.js        Step 5 — Validate  (tests mapped to requirement IDs)
 
 Read them in that order if you want to see the whole loop, not just the code.
 
-## Run it
+## Repository branches
+
+- **`main`**: Complete reference implementation including `src/` and `test/`.
+- **`spec-only`**: Contains only the specifications (`specs/`) and documentation, ready for generating code from scratch.
+
+---
+
+## Try it yourself: Generate from specs
+
+You can test the Spec-Driven Development workflow by generating the entire codebase from scratch using an AI coding assistant (such as JetBrains Junie, Claude, Cursor, Copilot, or ChatGPT):
+
+### 1. Start from the specs-only branch
+```bash
+git checkout spec-only
+```
+
+### 2. Prompt your AI coding agent
+Point your AI assistant to the `specs/` directory with a prompt like:
+
+> *"Implement the TinyLink URL shortener in Node.js with zero external dependencies, strictly following `specs/requirements.md` and `specs/plan.md`. Implement the tasks listed in `specs/tasks.md`, provide the complete code in `src/`, and write a full test suite in `test/api.test.js` using Node's built-in test runner (`node:test`)."*
+
+### 3. Validate your generated implementation
+Run the built-in test runner to verify requirement compliance:
+```bash
+npm test
+# or: node --test
+```
+
+### 4. Compare with the reference implementation
+```bash
+git diff main
+```
+
+---
+
+## Run the reference implementation
 
 No install step needed — this uses only Node's built-in `http` module.
 
