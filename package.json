@@ -1,0 +1,14 @@
+{
+  "name": "tinylink",
+  "version": "1.0.0",
+  "description": "TinyLink — the spec-driven URL shortener example from the Spec-Driven Development talk",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}
