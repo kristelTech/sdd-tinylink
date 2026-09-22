@@ -73,7 +73,7 @@ In another terminal:
 ```bash
 curl -s -X POST http://localhost:3000/links \
   -H 'Content-Type: application/json' \
-  -d '{"url":"https://www.jetbrains.com"}'
+  -d '{"url":"https://www.jetbrains.com/store/?section=personal&billing=yearly"}'
 # {"code":"aZ3kP9x","short_url":"http://localhost:3000/aZ3kP9x", ...}
 
 ```
